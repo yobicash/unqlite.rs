@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `UnQLiteVm` struct in crate `unqlite`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, UnQLiteVm">
+
+    <title>unqlite::document::UnQLiteVm - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct UnQLiteVm</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>unqlite</a>::<wbr><a href='index.html'>document</a></p><script>window.sidebarCurrent = {name: 'UnQLiteVm', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>unqlite</a>::<wbr><a href='index.html'>document</a>::<wbr><a class="struct" href=''>UnQLiteVm</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#88-93' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct UnQLiteVm { /* fields omitted */ }</pre><div class='docblock'><p>UnQLite Virtual Machine Object</p>
+
+<p>Wrapper for native <a href="https://unqlite.org/c_api_object.html#unqlite_vm">unqlite_vm</a> structure, 
+related <a href="https://unqlite.org/c_api_func.html">functions</a> 
+and <a href="https://unqlite.org/c_api/unqlite_vm_config.html">configuration</a>.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../unqlite/document/struct.UnQLiteVm.html" title="struct unqlite::document::UnQLiteVm">UnQLiteVm</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#96-266' title='goto source code'>[src]</a></span></h3>
+<div class='docblock'><p>Virtual Machine Object configuration and execution</p>
+</div><div class='impl-items'><h4 id='method.exec' class="method"><span id='exec.v' class='invisible'><code>fn <a href='#method.exec' class='fnname'>exec</a>(&amp;mut self) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../unqlite/document/enum.Value.html" title="enum unqlite::document::Value">Value</a>&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#107-113' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Execute a compiled Jx9 program.</p>
+</div><h4 id='method.exec_void' class="method"><span id='exec_void.v' class='invisible'><code>fn <a href='#method.exec_void' class='fnname'>exec_void</a>(&amp;mut self) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#116-119' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Execute a compiled Jx9 program. Jx9 script return value ignored.</p>
+</div><h4 id='method.dump' class="method"><span id='dump.v' class='invisible'><code>fn <a href='#method.dump' class='fnname'>dump</a>(&amp;self) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#127-129' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dump Jx9 virtual machine instructions to <code>stdout</code>.</p>
+</div><h4 id='method.output_to_channel' class="method"><span id='output_to_channel.v' class='invisible'><code>fn <a href='#method.output_to_channel' class='fnname'>output_to_channel</a>(&amp;mut self) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Receiver.html" title="struct std::sync::mpsc::Receiver">Receiver</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#133-142' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Redirect VM output to <code>std::sync::mpsc::Sender&lt;Vec&lt;u8&gt;&gt;</code> and return corresponding <code>Receiver</code>.
+Should be called before <code>exec()</code> method.</p>
+</div><h4 id='method.output_to_stdout' class="method"><span id='output_to_stdout.v' class='invisible'><code>fn <a href='#method.output_to_stdout' class='fnname'>output_to_stdout</a>(&amp;self) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#146-150' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Redirect VM output to <code>stdout</code>.
+Should be called before <code>exec()</code> method.</p>
+</div><h4 id='method.extract_output' class="method"><span id='extract_output.v' class='invisible'><code>fn <a href='#method.extract_output' class='fnname'>extract_output</a>(&amp;self) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#155-163' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>If the host application did not install a VM output consumer (<code>output_to_*</code> functions), 
+then the Virtual Machine will automatically redirect its output to an internal buffer.
+Should be called after <code>exec()</code> method.</p>
+</div><h4 id='method.output_length' class="method"><span id='output_length.v' class='invisible'><code>fn <a href='#method.output_length' class='fnname'>output_length</a>(&amp;self) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#167-171' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Return the total number of bytes that have been outputted by the Virtual Machine during program execution.
+Should be called after <code>exec()</code> method.</p>
+</div><h4 id='method.import_path' class="method"><span id='import_path.v' class='invisible'><code>fn <a href='#method.import_path' class='fnname'>import_path</a>&lt;T:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html" title="trait core::convert::AsRef">AsRef</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;(&amp;self, path: T) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#175-178' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Add a path to the import search directories for using in include or import Jx9 constructs.
+Should be called before <code>exec()</code> method.</p>
+</div><h4 id='method.report_errors_to_output' class="method"><span id='report_errors_to_output.v' class='invisible'><code>fn <a href='#method.report_errors_to_output' class='fnname'>report_errors_to_output</a>(&amp;self) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#182-184' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>All Jx9 run-time errors will be reported to the VM output.
+Should be called before <code>exec()</code> method.</p>
+</div><h4 id='method.recursion_depth' class="method"><span id='recursion_depth.v' class='invisible'><code>fn <a href='#method.recursion_depth' class='fnname'>recursion_depth</a>(&amp;self, max_depth: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#190-192' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set a recursion limit to the running script. That is, a function may not call itself (recurse) more than this limit. 
+If this limit is reached then the virtual machine abort the call and null is returned to the caller instead of the 
+function return value.
+Should be called before <code>exec()</code> method.</p>
+</div><h4 id='method.add_argument' class="method"><span id='add_argument.v' class='invisible'><code>fn <a href='#method.add_argument' class='fnname'>add_argument</a>&lt;T:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html" title="trait core::convert::AsRef">AsRef</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>&gt;&gt;(&amp;self, arg: T) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#196-199' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Populate the <code>$argv[n]</code> predefined Jx9 variable. First call of this method setups <code>$argv[0]</code>, second <code>$argv[1]</code>...
+Should be called before <code>exec()</code> method.</p>
+</div><h4 id='method.add_env_attr' class="method"><span id='add_env_attr.v' class='invisible'><code>fn <a href='#method.add_env_attr' class='fnname'>add_env_attr</a>&lt;K, V&gt;(&amp;self, key: K, value: V) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;K: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html" title="trait core::convert::AsRef">AsRef</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;V: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html" title="trait core::convert::AsRef">AsRef</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#203-212' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Manually populate the $_ENV predefined JSON object which hold environments variable.
+Should be called before <code>exec()</code> method.</p>
+</div><h4 id='method.add_variable' class="method"><span id='add_variable.v' class='invisible'><code>fn <a href='#method.add_variable' class='fnname'>add_variable</a>&lt;T:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;mut self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: T, <br>&nbsp;&nbsp;&nbsp;&nbsp;value: <a class="enum" href="../../unqlite/document/enum.Value.html" title="enum unqlite::document::Value">Value</a><br>) -&gt; <a class="type" href="../../unqlite/type.Result.html" title="type unqlite::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#247-252' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.extract_variable' class="method"><span id='extract_variable.v' class='invisible'><code>fn <a href='#method.extract_variable' class='fnname'>extract_variable</a>&lt;T:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html" title="trait core::convert::AsRef">AsRef</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>&gt;&gt;(&amp;self, name: T) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../unqlite/document/enum.Value.html" title="enum unqlite::document::Value">Value</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#256-261' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Extract the content of a variable declared inside your Jx9 script.
+Should be called before <code>exec()</code> method.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../unqlite/document/struct.UnQLiteVm.html" title="struct unqlite::document::UnQLiteVm">UnQLiteVm</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#268' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../unqlite/document/struct.UnQLiteVm.html" title="struct unqlite::document::UnQLiteVm">UnQLiteVm</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#269' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 id='impl-Drop' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/drop/trait.Drop.html" title="trait core::ops::drop::Drop">Drop</a> for <a class="struct" href="../../unqlite/document/struct.UnQLiteVm.html" title="struct unqlite::document::UnQLiteVm">UnQLiteVm</a></code><a href='#impl-Drop' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#271-276' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class="method"><span id='drop.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/drop/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/unqlite/document/doc_store.rs.html#273-275' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Destroy a unQLite virtual machine.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "unqlite";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
